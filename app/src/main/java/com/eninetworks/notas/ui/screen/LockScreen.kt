@@ -127,10 +127,11 @@ fun LockScreen(viewModel: LockViewModel, onUnlocked: () -> Unit) {
 }
 
 private fun tryBiometric(context: android.content.Context, vm: LockViewModel, onUnlocked: () -> Unit) {
+    val activity = context as? FragmentActivity ?: return
     val mgr = BiometricManager.from(context)
     if (mgr.canAuthenticate(BiometricManager.Authenticators.BIOMETRIC_STRONG) != BiometricManager.BIOMETRIC_SUCCESS) return
     val prompt = BiometricPrompt(
-        context as FragmentActivity,
+        activity,
         ContextCompat.getMainExecutor(context),
         object : BiometricPrompt.AuthenticationCallback() {
             override fun onAuthenticationSucceeded(result: BiometricPrompt.AuthenticationResult) {
