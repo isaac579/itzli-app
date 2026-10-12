@@ -1,5 +1,6 @@
 package com.eninetworks.notas.ui.screen.passwords
 
+import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
@@ -47,6 +48,15 @@ fun PasswordDetailScreen(passwordId: Long, viewModel: PasswordViewModel, onBack:
                 website = p.website; notes = p.notes; category = p.category
             }
         }
+    }
+
+    BackHandler {
+        if (title.isNotBlank()) {
+            val ref = pwRef
+            if (ref != null) viewModel.update(ref, title, username, password, website, notes, category)
+            else viewModel.save(title, username, password, website, notes, category)
+        }
+        onBack()
     }
 
     Scaffold(

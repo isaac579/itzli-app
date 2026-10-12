@@ -2,6 +2,7 @@ package com.eninetworks.notas.ui.screen.notes
 
 import android.Manifest
 import android.app.DatePickerDialog
+import androidx.activity.compose.BackHandler
 import android.app.TimePickerDialog
 import android.content.Intent
 import android.content.pm.PackageManager
@@ -174,6 +175,8 @@ fun NoteDetailScreen(
             onDismiss    = { showLabelDialog = false }
         )
     }
+
+    BackHandler { saveAndBack() }
 
     val bg = remember(color) { NoteColors.getOrElse(color) { Color.White } }
     val onBg = if (bg.luminance() > 0.5f) Color(0xFF1C1B1F) else Color(0xFFE6E1E5)
