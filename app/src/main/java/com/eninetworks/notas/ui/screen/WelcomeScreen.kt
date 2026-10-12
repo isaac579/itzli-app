@@ -91,7 +91,7 @@ fun WelcomeScreen(onAccept: () -> Unit) {
 
         Spacer(Modifier.height(16.dp))
         Text(
-            "Desarrollado por ICH · Isaac Calva Hernandez",
+            "Desarrollado por ICH",
             fontSize = 11.sp,
             color = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.45f),
             letterSpacing = 0.5.sp
