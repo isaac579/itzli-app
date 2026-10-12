@@ -102,5 +102,5 @@ Incluye tres módulos principales:
 ---
 
 <p align="center">
-  Desarrollado por <strong>ICH · Isaac Calva Hernandez</strong>
+  Desarrollado por <strong>ICH</strong>
 </p>
