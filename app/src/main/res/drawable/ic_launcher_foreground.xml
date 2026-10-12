@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Itzli — Obsidiana Volcánica
+    Lasca de obsidiana con fracturas concoidales (líneas curvas tipo concha)
+    y brillo iridiscente morado-azul, característico de la obsidiana real.
+    Inspirado en los cuchillos de obsidiana de los códices mexicas.
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Sombra base — profundidad de piedra -->
+    <path
+        android:fillColor="#08051A"
+        android:pathData="M57,12 L85,30 L91,64 L68,96 L38,94 L14,58 L30,22 Z" />
+
+    <!-- Cuerpo principal — negro volcánico profundo -->
+    <path
+        android:fillColor="#0E0B20"
+        android:pathData="M54,10 L82,28 L88,62 L66,94 L36,92 L16,56 L30,20 Z" />
+
+    <!-- Cara izquierda — ángulo diferente de la lasca -->
+    <path
+        android:fillColor="#1A1535"
+        android:pathData="M54,10 L30,20 L16,56 L36,92 L54,10 Z" />
+
+    <!-- Cara derecha superior — hacia el filo -->
+    <path
+        android:fillColor="#221C42"
+        android:pathData="M54,10 L82,28 L72,52 L54,10 Z" />
+
+    <!-- Reflejo iridiscente — destello morado índigo de la obsidiana bajo luz directa -->
+    <path
+        android:fillColor="#7B5FC4"
+        android:pathData="M54,10 L66,20 L58,30 L46,18 Z" />
+
+    <!-- Destello secundario — punto de máxima reflexión -->
+    <path
+        android:fillColor="#B09AE8"
+        android:pathData="M55,11 L61,15 L57,19 L51,15 Z" />
+
+    <!-- Destello en filo derecho -->
+    <path
+        android:fillColor="#9080D0"
+        android:pathData="M76,34 L82,28 L84,38 L78,42 Z" />
+
+    <!-- Fractura concoidal 1 — curva tipo concha, firma de la obsidiana real -->
+    <path
+        android:strokeColor="#2E265A"
+        android:strokeWidth="1.2"
+        android:fillColor="#00000000"
+        android:pathData="M 34,86 Q 46,56 54,10" />
+
+    <!-- Fractura concoidal 2 — paralela, más tenue -->
+    <path
+        android:strokeColor="#251F4A"
+        android:strokeWidth="0.9"
+        android:fillColor="#00000000"
+        android:pathData="M 50,90 Q 64,62 78,36" />
+
+    <!-- Fractura concoidal 3 — fragmento inferior -->
+    <path
+        android:strokeColor="#201A3E"
+        android:strokeWidth="0.7"
+        android:fillColor="#00000000"
+        android:pathData="M 40,92 Q 50,78 58,60" />
+
+    <!-- Arista derecha brillante — el filo más agudo -->
+    <path
+        android:strokeColor="#6A56A8"
+        android:strokeWidth="1.4"
+        android:fillColor="#00000000"
+        android:pathData="M 54,10 L 82,28 L 88,62" />
+
+    <!-- Arista izquierda — más opaca -->
+    <path
+        android:strokeColor="#3A3268"
+        android:strokeWidth="0.8"
+        android:fillColor="#00000000"
+        android:pathData="M 54,10 L 30,20 L 16,56" />
+
+    <!-- Base inferior — corte plano de la lasca -->
+    <path
+        android:strokeColor="#2C2452"
+        android:strokeWidth="0.6"
+        android:fillColor="#00000000"
+        android:pathData="M 36,92 L 66,94" />
+
+</vector>

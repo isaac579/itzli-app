@@ -1,0 +1,30 @@
+# Gradle
+.gradle/
+build/
+**/build/
+
+# Android
+local.properties
+*.iml
+*.ap_
+*.dex
+
+# Android Studio / IntelliJ
+.idea/
+*.iws
+*.ipr
+captures/
+
+# APKs y artefactos de release — no se versionan, van como GitHub Release
+app/release/
+
+# Keystores (nunca versionar)
+*.jks
+*.keystore
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Kotlin
+.kotlin/
