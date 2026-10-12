@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/isaac579/itzli-app/releases/download/v1.0/itzli-v1.0.apk">
+  <a href="https://github.com/isaac579/itzli-app/releases/download/v1.0/app-release.apk">
     <img src="https://img.shields.io/badge/⬇️%20Descargar%20APK-v1.0-black?style=for-the-badge&logo=android&logoColor=white" alt="Descargar APK">
   </a>
   &nbsp;
@@ -68,7 +68,7 @@ Incluye tres módulos principales:
 1. Descarga el APK:
 
 <p align="center">
-  <a href="https://github.com/isaac579/itzli-app/releases/download/v1.0/itzli-v1.0.apk">
+  <a href="https://github.com/isaac579/itzli-app/releases/download/v1.0/app-release.apk">
     <img src="https://img.shields.io/badge/⬇️%20Descargar%20Itzli%20v1.0.apk-Gratis-black?style=for-the-badge&logo=android&logoColor=white&labelColor=111111" alt="Descargar APK">
   </a>
 </p>
