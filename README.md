@@ -1,8 +1,8 @@
-<h1 align="center">
-  <br>
-  🖤 Itzli
-  <br>
-</h1>
+<p align="center">
+  <img src="assets/icon.svg" width="96" alt="Itzli icon">
+</p>
+
+<h1 align="center">Itzli</h1>
 
 <p align="center">
   <strong>App de notas personal con cifrado, biometría y privacidad total.</strong><br>
