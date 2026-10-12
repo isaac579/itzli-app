@@ -2,6 +2,7 @@ package com.eninetworks.notas.ui.navigation
 
 import android.content.Context
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.remember
 import androidx.compose.ui.platform.LocalContext
 import androidx.lifecycle.viewmodel.compose.viewModel
@@ -70,11 +71,16 @@ fun NavGraph() {
     val passVm:  PasswordViewModel  = viewModel(factory = passFactory)
     val labelVm: LabelViewModel     = viewModel(factory = labelFactory)
 
-    NavHost(navController = nav, startDestination = if (termsAccepted) Routes.LOCK else Routes.WELCOME) {
+    // startDestination siempre LOCK — evita crash por back stack inconsistente
+    // al reabrir la app después de matarla desde el segundo plano
+    NavHost(navController = nav, startDestination = Routes.LOCK) {
         composable(Routes.WELCOME) {
             WelcomeScreen { nav.navigate(Routes.LOCK) { popUpTo(Routes.WELCOME) { inclusive = true } } }
         }
         composable(Routes.LOCK) {
+            LaunchedEffect(Unit) {
+                if (!termsAccepted) nav.navigate(Routes.WELCOME)
+            }
             LockScreen(lockVm) { nav.navigate(Routes.HOME) { popUpTo(Routes.LOCK) { inclusive = true } } }
         }
         composable(Routes.HOME) {
