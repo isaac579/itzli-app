@@ -32,8 +32,10 @@ fun LockScreen(viewModel: LockViewModel, onUnlocked: () -> Unit) {
     var waitingConfirm by remember { mutableStateOf(false) }
     var error by remember { mutableStateOf("") }
 
+    val isUnlocked by viewModel.isUnlocked.collectAsState()
+
     LaunchedEffect(Unit) { viewModel.initialize() }
-    LaunchedEffect(hasPinSet) { if (hasPinSet) tryBiometric(context, viewModel, onUnlocked) }
+    LaunchedEffect(hasPinSet) { if (hasPinSet && !isUnlocked) tryBiometric(context, viewModel, onUnlocked) }
 
     Column(
         modifier = Modifier.fillMaxSize().padding(32.dp),
